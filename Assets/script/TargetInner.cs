@@ -33,12 +33,13 @@ public class TargetInner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision c)
     {
         Debug.Log("Collide");
+        OVRInput.SetControllerVibration(0.5f,0.3f,OVRInput.Controller.RTouch);
         if (c.gameObject.tag == "SwordTip")
         {
             //transform.position = TargetQueue
